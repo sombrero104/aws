@@ -13,6 +13,8 @@ Lambda Trigger를 이용하면 S3 버킷에 동영상 파일이 업로드 되는
 실시간으로 반영되지 않아도 되고 대용량일 경우에는 아래와 같이 S3 Batch를 만들어서 람다를 실행하도록 할 수도 있다.  <br/>
 <br/>
 <img src="./images/s3_batch_mediaConvert.png" width="80%" /> <br/>
+
+#### * AWS S3 비디오 일괄 트랜스코딩 튜토리얼 참조 
 https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/tutorial-s3-batchops-lambda-mediaconvert-video.html <br/>
 <br/>
 이벤트 발생 시 JSON 형태로 이벤트에 관한 정보가 람다 함수로 전달이 되는데 비동기식 호출도 가능하다. <br/>
