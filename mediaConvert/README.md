@@ -4,17 +4,17 @@
 <br/>
 
 ## Lambda Trigger를 이용한 방식 
-<img src="./images/lambda_trigger_mediaConvert.png" width="80%" />
+<img src="./images/lambda_trigger_mediaConvert.png" width="70%" />
 <br/>
-본 예제에서는 Lambda Trigger를 이용하여 MediaConvert를 호출하는 방식을 사용하였다.
-Lambda Trigger를 이용하면 S3 버킷에 동영상 파일이 업로드 되는 순간 트리거로 람다 함수가 실행된다. 
-때문에 동영상 용량이 크지 않을 경우에는 업로드 즉시 준실시간(?)으로 인코딩을 할 수 있다. 
-실시간으로 반영되지 않아도 되고 대용량일 경우에는 아래와 같이 S3 Batch를 만들어서 람다를 실행하도록 할 수도 있다. 
+본 예제에서는 Lambda Trigger를 이용하여 MediaConvert를 호출하는 방식을 사용하였다. <br/>
+Lambda Trigger를 이용하면 S3 버킷에 동영상 파일이 업로드 되는 순간 트리거로 람다 함수가 실행된다.  <br/>
+때문에 동영상 용량이 크지 않을 경우에는 업로드 즉시 준실시간(?)으로 인코딩을 할 수 있다.  <br/>
+실시간으로 반영되지 않아도 되고 대용량일 경우에는 아래와 같이 S3 Batch를 만들어서 람다를 실행하도록 할 수도 있다.  <br/>
 <br/>
 <img src="./images/s3_batch_mediaConvert.png" width="80%" />
 https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/tutorial-s3-batchops-lambda-mediaconvert-video.html
 <br/>
-이벤트 발생 시 JSON 형태로 이벤트에 관한 정보가 람다 함수로 전달이 되는데 비동기식 호출도 가능하다. 
+이벤트 발생 시 JSON 형태로 이벤트에 관한 정보가 람다 함수로 전달이 되는데 비동기식 호출도 가능하다. <br/>
 <br/><br/>
 
 ## 1. MediaConvert 서비스 Role(역할) 생성
