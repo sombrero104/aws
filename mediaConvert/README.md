@@ -16,6 +16,8 @@ Lambda Trigger를 이용하면 S3 버킷에 동영상 파일이 업로드 되는
 https://docs.aws.amazon.com/ko_kr/AmazonS3/latest/userguide/tutorial-s3-batchops-lambda-mediaconvert-video.html <br/>
 <br/>
 이벤트 발생 시 해당 이벤트가 JSON 형태로 람다 함수 핸들러의 파라미터로 전달이 된다. <br/>
+람다에서 MediaConvert 작업(job) 생성을 요청할 때에도 작업 설정 파일을 JSON 형태로 보내어 작업을 생성한다. <br/> 
+(이 때 생성된 JSON을 람다에서 로그로 남기면 CloudWatch에서 확인할 수 있다.) 
 <br/><br/>
 
 ## 1. MediaConvert 서비스 Role(역할) 생성
