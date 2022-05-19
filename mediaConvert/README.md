@@ -7,7 +7,7 @@
 <br/>
 <img src="./images/lambda_trigger_mediaConvert.png" width="57%" /> <br/>
 본 예시에서는 Lambda Trigger를 이용하여 MediaConvert를 호출하는 방식을 사용하였다. <br/>
-Lambda Trigger를 이용하면 S3 버킷에 동영상 파일이 업로드 되는 순간 트리거로 람다 함수가 실행된다.  <br/>
+Lambda Trigger(정확히는 S3 트리거이다.)를 이용하면 S3 버킷에 동영상 파일이 업로드 되는 순간 트리거로 람다 함수가 실행된다.  <br/>
 때문에 동영상 용량이 크지 않을 경우에는 업로드 즉시 준실시간(?)으로 인코딩을 할 수 있다.  <br/>
 실시간으로 반영되지 않아도 되고 대용량일 경우에는 아래와 같이 S3 Batch를 만들어서 람다를 실행하도록 할 수도 있다.  <br/>
 
