@@ -161,6 +161,7 @@ convert.py 에서는 변환 후 저장하는 부분을 수정하였다.
 <pre>
 def handler(event, context):
     // 핸들러에서 받은 JSON 형태의 이벤트를 출력하여 CloudWatch에서 확인할 수 있도록 함. 
+    // 이 때 출력된 이벤트 JSON을 참고하여 람다 테스트 탭에서 미리 테스트를 실행해 볼 수도 있다. 
     logger.info('# (0) event: %s', event) 
     ...
     sourceS3Key = event['Records'][0]['s3']['object']['key']
