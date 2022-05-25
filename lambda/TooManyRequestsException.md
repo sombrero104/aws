@@ -33,8 +33,8 @@ N번의 요청이 있는 경우, N개의 요청들이 경쟁을 하고, <br/>
 <img src="./images/equal_jitter.png" width="57%" /> <br/>
 
 #### 위의 시뮬레이션에서 사용된 코드의 백오프와 지터 부분 
-<img src="./images/aws_backoff_simulator_1.png" width="45%" /> <br/>
-<img src="./images/aws_backoff_simulator_2.png" width="45%" /> <br/>
+<img src="./images/aws_backoff_simulator_1.png" width="42%" /> <br/><br/>
+<img src="./images/aws_backoff_simulator_2.png" width="42%" /> <br/>
 <br/>
 
 #### * 지수 백오프와 지터에 대한 글과 백오프 시뮬레이터 코드 참조 
@@ -65,11 +65,11 @@ client = boto3.client("mediaconvert", region_name=region, endpoint_url=mediaconv
 위에서 mode를 standard로 주었는데 Boto 깃헙에서 코드를 보면 백오프 + 지터가 적용되어 있는 것을 확인할 수 있다. <br/>
 
 ### [client.py] <br/>
-<img src="./images/botocore_client_py.png" width="43%" /> <br/>
+<img src="./images/botocore_client_py.png" width="45%" /> <br/>
 
 ### [standard.py] <br/>
-<img src="./images/botocore_standard_py1.png" width="43%" /> <br/>
-<img src="./images/botocore_standard_py2.png" width="43%" /> <br/><br/>
+<img src="./images/botocore_standard_py1.png" width="45%" /> <br/>
+<img src="./images/botocore_standard_py2.png" width="45%" /> <br/><br/>
 
 #### * Boto3 client의 config로 retry 설정 방법과 Boto 깃헙의 retry 코드 부분 참조 
 https://boto3.amazonaws.com/v1/documentation/api/latest/guide/retries.html#defining-a-retry-configuration-in-a-config-object-for-your-boto3-client <br/> 
