@@ -32,7 +32,7 @@ N번의 요청이 있는 경우, N개의 요청들이 경쟁을 하고, <br/>
 #### 백오프 + 지터 사용 시 전체 요청 완료 속도 비교 
 <img src="./images/equal_jitter.png" width="57%" /> <br/>
 
-#### 위의 시뮬레이션에서 사용된 코드의 백오프와 지터 부분 
+#### 위의 시뮬레이션에서 사용된 코드의 지수 백오프와 지터 부분 
 <img src="./images/aws_backoff_simulator_1.png" width="42%" /> <br/><br/>
 <img src="./images/aws_backoff_simulator_2.png" width="42%" /> <br/>
 <br/>
