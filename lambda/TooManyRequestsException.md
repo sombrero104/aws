@@ -2,7 +2,7 @@
 
 # 시간 제한과 재시도 
 서비스의 동시 요청 수가 많을 경우 실패되는 요청이 발생하거나 부하로 인해 서비스에 장애가 발생할 수 있다. <br/>
-때문에 요청마다 시간 제한을 두거나 일정 시간 대기한 후 재시도하도록 하여 실패되는 요청을 줄일 수 있다. <br/>
+이를 해결하기 위해 요청마다 시간 제한을 두거나 일정 시간 대기한 후 재시도하도록 하여 실패되는 요청을 줄일 수 있다. <br/>
 <br/>
 
 ## 시간 제한 
@@ -33,8 +33,9 @@ N번의 요청이 있는 경우, N개의 요청들이 경쟁을 하고, <br/>
 <img src="./images/equal_jitter.png" width="57%" /> <br/>
 
 #### 위의 시뮬레이션에서 사용된 코드의 백오프와 지터 부분 
-<img src="./images/aws_backoff_simulator_1.png" width="57%" /> <br/>
-<img src="./images/aws_backoff_simulator_2.png" width="57%" /> <br/>
+<img src="./images/aws_backoff_simulator_1.png" width="32%" /> <br/>
+<img src="./images/aws_backoff_simulator_2.png" width="32%" /> <br/>
+<br/>
 
 #### * 지수 백오프와 지터에 대한 글과 백오프 시뮬레이터 코드 참조 
 https://aws.amazon.com/ko/blogs/architecture/exponential-backoff-and-jitter/ <br/>
@@ -44,7 +45,7 @@ https://github.com/aws-samples/aws-arch-backoff-simulator/blob/master/src/backof
 https://aws.amazon.com/ko/builders-library/timeouts-retries-and-backoff-with-jitter/ <br/>
 <br/><br/>
 
-### Boto 라이브러리에서 AWS 서비스 요청 시 재시도 관련 설정 방법
+## Boto 라이브러리에서 AWS 서비스 요청 시 재시도 관련 설정 방법
 람다에서 AWS 서비스 요청 시 동시 요청 수가 많을 경우 TooManyRequestsException이 발생하고 <br/>
 일부 요청은 수행되지 않는 현상이 발생할 수 있다. <br/>
 Boto 라이브러리를 사용하는 경우에는 client()로 AWS 서비스 요청 시 <br/>
@@ -64,13 +65,13 @@ client = boto3.client("mediaconvert", region_name=region, endpoint_url=mediaconv
 위에서 mode를 standard로 주었는데 Boto 깃헙에서 코드를 보면 백오프 + 지터가 적용되어 있는 것을 확인할 수 있다. <br/>
 
 ### [client.py] <br/>
-<img src="./images/botocore_client_py.png" width="57%" /> <br/>
+<img src="./images/botocore_client_py.png" width="37%" /> <br/>
 
 ### [standard.py] <br/>
-<img src="./images/botocore_standard_py1.png" width="57%" /> <br/>
-<img src="./images/botocore_standard_py2.png" width="57%" /> <br/>
+<img src="./images/botocore_standard_py1.png" width="37%" /> <br/>
+<img src="./images/botocore_standard_py2.png" width="37%" /> <br/>
 
-### * Boto3 client의 config로 retry 설정 방법과 Boto 깃헙의 retry 코드 부분 참조 
+#### * Boto3 client의 config로 retry 설정 방법과 Boto 깃헙의 retry 코드 부분 참조 
 https://boto3.amazonaws.com/v1/documentation/api/latest/guide/retries.html#defining-a-retry-configuration-in-a-config-object-for-your-boto3-client <br/> 
 https://github.com/boto/botocore/blob/develop/botocore/retries/standard.py#L276 <br/>
 
