@@ -40,7 +40,7 @@ N번의 요청이 있는 경우, N개의 요청들이 경쟁을 하고, <br/>
 
 #### 위의 시뮬레이션에서 사용된 코드의 지수 백오프와 지터 부분 
 <img src="./images/aws_backoff_simulator_1.png" width="42%" /> <br/><br/>
-<img src="./images/aws_backoff_simulator_2.png" width="42%" /> <br/>
+<img src="./images/aws_backoff_simulator_2.png" width="47%" /> <br/>
 <br/>
 
 #### * 지수 백오프와 지터에 대한 글과 백오프 시뮬레이터 코드 참조 
