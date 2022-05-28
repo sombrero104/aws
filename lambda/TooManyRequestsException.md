@@ -28,9 +28,15 @@ N번의 요청이 있는 경우, N개의 요청들이 경쟁을 하고, <br/>
 때문에 약간의 지터(약간의 랜덤한 진폭?)를 추가하여 <br/>
 지수 백오프 대기 시간 내에서 다시 랜덤하게 대기 시간을 추가한 후 요청들을 분산하도록 한다. <br/>
 <br/>
+지수 백오프에 지터를 사용하면 시간은 더 오래 걸리지만 <br/>
+클라이언트 작업량과 서버 부하를 감소시킨다. <br/>
+<br/>
 
 #### 백오프 + 지터 사용 시 전체 요청 완료 속도 비교 
-<img src="./images/equal_jitter.png" width="57%" /> <br/>
+<img src="./images/equal_jitter.png" width="47%" /> <br/>
+
+#### 백오프 + 지터 사용 시 클라이언트 작업량 비교 
+<img src="./images/jitter_works.png" width="47%" /> <br/>
 
 #### 위의 시뮬레이션에서 사용된 코드의 지수 백오프와 지터 부분 
 <img src="./images/aws_backoff_simulator_1.png" width="42%" /> <br/><br/>
